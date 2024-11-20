@@ -206,6 +206,7 @@ public class KoPapirOllo extends javax.swing.JFrame {
         }
         
         logArea.append("A játéknak vége!");
+        logArea.append("Új játékhoz válassz újra");
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
