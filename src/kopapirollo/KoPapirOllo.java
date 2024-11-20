@@ -36,7 +36,8 @@ public class KoPapirOllo extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         logArea = new javax.swing.JTextArea();
         jPanel2 = new javax.swing.JPanel();
@@ -45,15 +46,36 @@ public class KoPapirOllo extends javax.swing.JFrame {
         emberOllo = new javax.swing.JRadioButton();
         emberKo = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
+        valasztoikon = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Kő, papír, olló játék");
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Kő, papír, olló játék"));
 
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Eredményjelző"));
+
+        logArea.setEditable(false);
         logArea.setColumns(20);
         logArea.setRows(5);
         logArea.setText("Kő, papír, olló játék!");
         jScrollPane1.setViewportView(logArea);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 323, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Választás"));
 
@@ -119,10 +141,17 @@ public class KoPapirOllo extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(valasztoikon, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -132,8 +161,31 @@ public class KoPapirOllo extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
+                        .addGap(22, 22, 22)
+                        .addComponent(valasztoikon, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -142,25 +194,16 @@ public class KoPapirOllo extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)))
+                .addContainerGap()
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(20, 20, 20))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addGap(16, 16, 16)
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -170,12 +213,19 @@ public class KoPapirOllo extends javax.swing.JFrame {
         logArea.setText("");
         if (!emberOllo.isSelected() && !emberPapir.isSelected() && !emberKo.isSelected()) {
             JOptionPane.showMessageDialog(this, "Kérlek, válassz egy lehetőséget!", "Hiba", JOptionPane.ERROR_MESSAGE);
-        return;
+            return;
         }
         String jatekostipp = "";
         int geptipp = rnd.nextInt(3) + 1;
-        logArea.append("A gép is választott!\n");
-        
+        String geptippkiiras = "";
+        if (geptipp == 1) {
+            geptippkiiras = "Kő";
+        } else if (geptipp == 2) {
+            geptippkiiras = "Papír";
+        } else if (geptipp == 3) {
+            geptippkiiras = "Olló";
+        }
+        logArea.append("A gép is választott! " + "(" + geptippkiiras + ")\n");
 
         if (emberKo.isSelected()) {
             jatekostipp = "Kő"; // 1
@@ -184,7 +234,7 @@ public class KoPapirOllo extends javax.swing.JFrame {
         } else if (emberOllo.isSelected()) {
             jatekostipp = "Olló"; // 3
         }
-        
+
         if (jatekostipp == "Kő" && geptipp == 1){
             logArea.append("Döntetlen!\n");
         } else if (jatekostipp == "Kő" && geptipp == 2) {
@@ -204,26 +254,28 @@ public class KoPapirOllo extends javax.swing.JFrame {
         } else if (jatekostipp == "Olló" && geptipp == 3) {
             logArea.append("Döntetlen!\n");
         }
-        
-        logArea.append("A játéknak vége!");
+
+        logArea.append("A játéknak vége!\n");
         logArea.append("Új játékhoz válassz újra");
-        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void emberKoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emberKoActionPerformed
         logArea.setText("");
         logArea.append("Az ember a követ választotta\n");
+        valasztoikon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kopapirollo/kepmegjelenites/ko.png")));
     }//GEN-LAST:event_emberKoActionPerformed
-
-    private void emberPapirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emberPapirActionPerformed
-        logArea.setText("");
-        logArea.append("Az ember a papírt választotta\n");
-    }//GEN-LAST:event_emberPapirActionPerformed
 
     private void emberOlloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emberOlloActionPerformed
         logArea.setText("");
         logArea.append("Az ember az ollót választotta\n");
+        valasztoikon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kopapirollo/kepmegjelenites/ollo.png")));
     }//GEN-LAST:event_emberOlloActionPerformed
+
+    private void emberPapirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emberPapirActionPerformed
+        logArea.setText("");
+        logArea.append("Az ember a papírt választotta\n");
+        valasztoikon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kopapirollo/kepmegjelenites/papir.png")));
+    }//GEN-LAST:event_emberPapirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -266,10 +318,12 @@ public class KoPapirOllo extends javax.swing.JFrame {
     private javax.swing.JRadioButton emberOllo;
     private javax.swing.JRadioButton emberPapir;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea logArea;
+    private javax.swing.JLabel valasztoikon;
     // End of variables declaration//GEN-END:variables
 }
